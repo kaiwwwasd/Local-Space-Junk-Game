@@ -35,12 +35,13 @@ class Magpie {
         // the ship is drawn on top of it. Rotate by the Magpie's rotation,
         // translate to (0, Magpie.CARGO_Y), and call Junk.drawJunk(). Use
         // push() and pop() so the ship below isn't moved too.
-        if (this.capturedJunk !== null) {
-          push();
-          rotate(this.physics.rotation);
-          translate(0, Magpie.CARGO_Y);
-          Junk.drawJunk();
-          pop();
+        if (this.capturedJunk !== null) { 
+  push();
+  rotate(this.physics.rotation);
+  translate(0, Magpie.CARGO_Y);
+  Junk.drawJunk(this.capturedJunk);
+  pop();
+
         }
 
         Magpie.drawMagpie({ rotation: this.physics.rotation, beam: this.beam });
