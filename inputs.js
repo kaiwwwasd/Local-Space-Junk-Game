@@ -14,26 +14,36 @@ class Inputs {
     this.magpie = magpie;
   }
 
-  handleKeyDown(delta) {
-    // Turn left with A.
-    if (keyIsDown(65)) {
-      this.magpie.physics.rotate(-Inputs.TURN_RATE, delta);
-    }
+ 
+handleKeyDown(delta) {
+ 
+  if (keyIsDown(65)) {
+    this.magpie.physics.rotate(-Inputs.TURN_RATE, delta);
+  }
 
-    // Turn right with D.
-    if (keyIsDown(68)) {
-      this.magpie.physics.rotate(Inputs.TURN_RATE, delta);
-    }
+  
+  if (keyIsDown(68)) {
+    this.magpie.physics.rotate(Inputs.TURN_RATE, delta);
+  }
 
-    // Move forward with W.
-    if (keyIsDown(87)) {
-      this.magpie.physics.thrust(Inputs.THRUST, delta);
-    }
 
-    // Move backward with S.
-    if (keyIsDown(83)) {
-      this.magpie.physics.thrust(-Inputs.REVERSE_THRUST, delta);
-    }
+  if (keyIsDown(87)) {
+    this.magpie.physics.thrust(Inputs.THRUST, delta);
+  }
+
+ 
+  if (keyIsDown(83)) {
+    this.magpie.physics.thrust(-Inputs.REVERSE_THRUST, delta);
+  }
+
+ 
+  if (keyIsDown(32)) {
+    this.magpie.enableBeam(true);
+  } else {
+    this.magpie.enableBeam(false);
+  }
+}
+
 
     // TODO (Phase 2): Use keyIsDown() to check w, a, s, and d, and call
     // this.magpie.physics.thrust() or this.magpie.physics.rotate() with
