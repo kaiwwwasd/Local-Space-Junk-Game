@@ -57,8 +57,10 @@ class Magpie {
   captureJunk(junk) {
     // TODO (Phase 4): Remember the junk in this.capturedJunk, and switch the
     // beam off.
-    this.capturedJunk = junk;
-    this.enableBeam(false);
+   
+  this.capturedJunk = junk;
+  this.enableBeam(false);
+
   }
 
   // this method is static. That means it doesn't use `this` to gain access to
