@@ -18,22 +18,22 @@ class Inputs {
 
   handleKeyDown(delta) {
     // Turn left with A.
-    if (keyIsDown(65)) {
+    if (keyIsDown("a")) {
       this.magpie.physics.rotate(-Inputs.TURN_RATE, delta);
     }
 
     // Turn right with D.
-    if (keyIsDown(68)) {
+    if (keyIsDown("d")) {
       this.magpie.physics.rotate(Inputs.TURN_RATE, delta);
     }
 
     // Move forward with W.
-    if (keyIsDown(87)) {
+    if (keyIsDown("w")) {
       this.magpie.physics.thrust(Inputs.THRUST, delta);
     }
 
     // Move backward with S.
-    if (keyIsDown(83)) {
+    if (keyIsDown("s")) {
       this.magpie.physics.thrust(-Inputs.REVERSE_THRUST, delta);
     }
 
